@@ -13,21 +13,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div class="header container">
-      <div id="header">
-        <div class="title-nav d-flex align-items-center">
+        <div class="title-nav d-flex ">
           <img src="./pictures/Icon.png" alt="Foundation logo" class="logo" />
-          <section class="page-header flex-column">
+          <section class="page-header flex-column col">
             <h1 class="page-title">Foundation</h1>
             <p class="page-description">Startup landing template</p>
           </section>
-          <nav class="navbar navbar-expand-sm navbar-light ml-auto">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link font-weight-bold" href="#"
-                    >Home <span class="sr-only">(current)</span></a
-                  >
+          
+          <nav class="navbar navbar-expand-sm navbar-light">
+            <div class="container">
+              <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar1"
+            >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+              <ul class="navbar-nav nav nav-fill mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link active font-weight-bold" href="#"
+                    >Home</a                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link font-weight-normal" href="#">Stories</a>
@@ -54,8 +63,12 @@
                 <button class="get-started">Get Started</button>
               </ul>
             </div>
-          </nav>
-        </div>
+          
+      </div>
+      </nav>
+    </div>
+    </div>
+    <div class="all-article container">
         <div class="row">
           <div class="col">
             <div class="article d-flex flex-column">
@@ -76,6 +89,7 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
     <div class="questions container d-flex">
       <section class="question flex-column">
@@ -94,10 +108,10 @@
         </p>
       </section>
     </div>
-    <div class="features container">
+    <div class="features container d-flex">
       <div class="row" id="features">
-        <div class="col-4">
-          <p class="features font-weight-bold">Features</p>
+        <div class="all-features flex-column">
+          <p class="features-name font-weight-bold">Features</p>
           <h1 class="features-title">Easily find leads and customers</h1>
           <p class="features-text">
             Send one-off and automated email, push, and in-app messages to
@@ -122,8 +136,10 @@
             <img src="./pictures/platforms_icon.png" alt="Platforms icon" />
             Develop across platforms
           </p>
+          <img src="./pictures/features2.png" alt="Mobile image for features" class="features-2">
+          <p class="mobile-desc text-center">A better way to acquire new users</p>
         </div>
-        <div class="col">
+        <div class="flex-column">
           <img
             src="./pictures/Invision Screen.png"
             alt="Invision screen"
@@ -174,7 +190,7 @@
             />
             <p class="card-text">Athletes</p>
           </a>
-          <a href="#" class="card col mx-3">
+          <a href="#" class="card col mx-auto">
             <img
               class="card-img mx-auto"
               src="./pictures/creators.png"
@@ -187,7 +203,7 @@
     </div>
     <div class="hiring container">
       <div class="hiring-header mx-auto text-center">
-        <h1 class="hiring">We're hiring</h1>
+        <h1 class="hiring-title">We're hiring</h1>
         <p class="hiring-desc">
           We're a team of lifelong learners. We're equal parts left and right
           brained.

@@ -8,35 +8,59 @@ body {
   font-family: Work Sans, sans-serif;
 }
 
-.header {
+.header,
+.all-article {
   display: flex;
   background-color: #f3c6bd;
-  height: 600px;
-
   padding: 0px 50px;
 }
+.all-article {
+  height: 450px;
+}
 
-#header {
+.all-features {
+  width: 43%;
+}
+
+.hamb-menu {
+  font-size: 25px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle {
+  display: none;
 }
 
 .title-nav {
   padding: 2% 0;
 }
 
-.nav-item {
-  margin: 0 0.5rem;
+.navbar {
+  padding-left: 25rem;
 }
 
 .logo {
-  height: 100%;
+  width: auto;
+  align-self: center;
+  height: 48px;
   border-color: #ffffff;
   border-style: solid;
-  border-radius: 5px;
-  background-color: #ffffff;
-  border-width: 0.4rem;
+  border-width: 0.4em;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 1e-5) 100%
+    ),
+    #ffffff;
+  background-blend-mode: overlay, normal;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
-
 .page-header {
+  width: 200px;
   padding-top: 1.7rem;
   padding-left: 0.5rem;
 }
@@ -118,12 +142,23 @@ body {
   font-size: 1rem;
 }
 
-#features {
+.features {
   padding: 50px 50px;
   position: relative;
 }
 
-p.features {
+.features-2,
+.mobile-desc {
+  display: none;
+}
+
+.mobile-desc {
+  color: rgba(43, 41, 45, 0.6);
+  text-align: center;
+  font-size: 14px;
+}
+
+.features-name {
   color: #009b4d;
 }
 
@@ -168,9 +203,6 @@ p.features {
 
 .visitors {
   background-color: #edf8fb;
-}
-
-#visitors {
   padding: 50px 50px;
 }
 
@@ -198,9 +230,7 @@ p.features {
 }
 
 .card {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border: 0;
+  padding: 20px 20px;
   border-radius: 5px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.1),
     inset 0px 1px 0px rgba(255, 255, 255, 0.1);
@@ -230,6 +260,12 @@ p.features {
   padding: 50px 50px;
 }
 
+.hiring-title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+}
+
 .vacancy {
   width: 70%;
 }
@@ -252,9 +288,6 @@ p.features {
 
 .trial {
   background-color: #f4f5f7;
-}
-
-#trial {
   padding: 50px 50px;
 }
 
@@ -264,9 +297,10 @@ p.features {
 }
 
 @media (max-width: 1200px) {
-  .header {
-    height: 500px;
+  .navbar {
+    padding-left: 13rem;
   }
+
   .ouch {
     left: 18.5rem;
     bottom: 22rem;
@@ -282,12 +316,17 @@ p.features {
 }
 
 @media (max-width: 990px) {
-  .header {
-    height: 400px;
+  .navbar {
+    padding-left: 10.7rem;
   }
 
-  #header {
+  .header,
+  .all-article {
     padding: 0 25px;
+  }
+
+  .all-article {
+    height: 275px;
   }
 
   .logo {
@@ -314,8 +353,8 @@ p.features {
   }
 
   .ouch {
-    width: 70%;
-    left: 14rem;
+    width: 65%;
+    left: 15.5rem;
     bottom: 16.5rem;
   }
 
@@ -325,12 +364,44 @@ p.features {
   }
 
   .article-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.4rem;
+  }
+  .article {
+    margin-top: 20px;
+  }
+
+  .questions,
+  .features,
+  .visitors,
+  .hiring,
+  .trial {
+    padding: 25px 25px;
+  }
+
+.card {
+  padding: 5px 5px 5px 0;
+}
+
+  .card-img {
+    height: 75%;
+    width: auto;
+  }
+
+  .vacancy {
+    padding : 20px 20px;
   }
 }
 
 @media (max-width: 770px) {
+  .navbar {
+    padding-left: 2.5rem;
+  }
+
+  .all-article {
+    height: 200px;
+  }
+
   .page-title {
     font-size: 0.7rem;
   }
@@ -343,6 +414,10 @@ p.features {
     font-size: 0.7rem;
   }
 
+  .article {
+    margin-top: 0;
+  }
+
   .article-title {
     font-size: 2.1rem;
     line-height: 2.1rem;
@@ -351,5 +426,163 @@ p.features {
   .article-text {
     font-size: 0.65rem;
     line-height: 1rem;
+  }
+
+  .article-buttons {
+    margin-top: 0.9rem;
+  }
+
+  .get-started,
+  .learn-more {
+    font-size: 0.6rem;
+    width: 5rem;
+    height: 1.6rem;
+  }
+
+  .ouch {
+    left: 12rem;
+    bottom: 12.5rem;
+  }
+
+
+
+  .card {
+    padding: 0;
+  }
+  .card-img {
+    height: 40%;
+    width: auto;
+  }
+  .card-text {
+    font-size: 0.75rem;
+  }
+  .vacancy {
+    padding : 15px 15px;
+  }
+
+  .location {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    max-width: 320px;
+  }
+  .header {
+    width: auto;
+    background-color: #ffffff;
+    padding: 0 15px;
+  }
+
+  .all-article,
+  .questions,
+  .features,
+  .visitors,
+  .hiring,
+  .trial,
+  .all-features {
+    padding: 15px 15px;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .page-header {
+    width: auto;
+  }
+
+  .page-title {
+    font-size: 1.2rem;
+  }
+
+  .page-description {
+    display: none;
+  }
+
+  .all-article {
+    background-color: #f3c6bd;
+    height: 750px;
+  }
+
+  .navbar {
+    padding-left: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .article-title {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 2.8rem;
+  }
+  .article-text {
+    width: 100%;
+    font-size: 1.9rem;
+    line-height: 2rem;
+  }
+
+  .article-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-self: center;
+    margin: 0;
+  }
+
+  .get-started,
+  .learn-more,
+  .more-about-company {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 3rem;
+  }
+
+  .ouch {
+    position: absolute;
+    width: 320px;
+    left: -0.94rem;
+    bottom: -12rem;
+  }
+
+  .questions {
+    flex-direction: column;
+  }
+
+  .invision {
+    display: none;
+  }
+
+  .all-features {
+    width: 100%;
+  }
+
+  .new-customers,
+  .new-customers-text,
+  .engage {
+    display: none;
+  }
+
+  .features-2,
+  .mobile-desc {
+    display: unset;
+  }
+
+  .visitors-header {
+    width: 100%;
+  }
+
+  .visitors-buttons,
+  .categories {
+    flex-direction: column;
+  }
+
+  .card {
+
+  padding: 10px 10px;
+    margin-bottom: 5px;
+    align-self: center;
   }
 }
